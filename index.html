@@ -1,0 +1,331 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>
+    MemFace
+  </title>
+
+  <!-- bootstrap -->
+  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+  <!-- icon -->
+  <script src="https://kit.fontawesome.com/87dc3e863a.js" crossorigin="anonymous"></script>
+  <!-- font -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
+  <style>
+    body {
+      background: rgb(255, 255, 255) no-repeat fixed top left;
+      font-family:'Open Sans', sans-serif;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- cover -->
+  <section>
+    <div class="jumbotron text-center mt-0" style="padding-bottom: 0px;">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col">
+            <!-- paper title -->
+            <h2 style="font-size:40px;">
+              MemFace
+            </h2>
+            <h2 style="font-size:30px;">
+                Memories are One-to-Many Mapping Alleviators in Talking Face Generation
+            </h2>
+
+            <hr>
+            
+            <!-- authors -->
+            <h6> Anni Tang<sup>1</sup>, 
+                 <a href="https://scholar.google.com/citations?user=P08KU1YAAAAJ" target="_blank">Tianyu He</a><sup>2</sup>, 
+                 <a href="https://scholar.google.com/citations?user=tob-U1oAAAAJ" target="_blank">Xu Tan</a><sup>2</sup>, 
+                 <a href="https://scholar.google.com/citations?user=XsfjhQ0AAAAJ" target="_blank">Jun Ling</a><sup>1</sup>, 
+                 <a href="https://scholar.google.com/citations?user=UlMO-z8AAAAJ" target="_blank">Runnan Li</a><sup>3</sup>, 
+                 <a href="https://scholar.google.com/citations?user=689bIIwAAAAJ" target="_blank">Sheng Zhao</a><sup>3</sup>, 
+                 <a href="https://scholar.google.com/citations?user=jKIoTVoAAAAJ" target="_blank">Li Song</a><sup>1</sup>, 
+                 <a href="https://scholar.google.com/citations?user=pZBEnY8AAAAJ" target="_blank">Jiang Bian</a><sup>2</sup>
+                 <br>
+                 <br>
+            <p> <sup>1</sup> Shanghai Jiao Tong University &nbsp;
+                <sup>2</sup> Microsoft Research Asia &nbsp;
+                <sup>3</sup> Microsoft Azure Speech &nbsp;
+                <br>
+            </p>
+            
+            <!-- links -->
+            <div class="row justify-content-center">
+              <!-- link to paper -->
+              <div style="margin: 5px;">
+                <p class="mb-5"><a class="btn btn-large btn-dark" href="https://arxiv.org/abs/2211.12368" role="button" target="_blank">
+                <i class="fa fa-file"></i> 
+                Paper 
+                </a> </p>
+              </div>
+              <!-- link to video -->
+              <div style="margin: 5px;">
+                <p class="mb-5"><a class="btn btn-large btn-dark" href="https://www.youtube.com/watch?v=54gGy5r49jY" role="button" target="_blank">
+                <i class="fa-brands fa-youtube"></i> 
+                Video
+                </a> </p>
+              </div>
+              <!-- link to code -->
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- video carousel -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Our Synthesized Results (trained on English only)</h3>
+            <hr style="margin-top:0px">
+            
+            <table style="table-layout: fixed;">
+              <tbody>
+                  <tr>
+                    <td width="33%"> <video width="95%" controls> <source src="static/videos/ours/english.mp4" type="video/mp4"> </video> </td>
+                    <td width="33%"> <video width="95%" controls> <source src="static/videos/ours/german-woman.mp4" type="video/mp4"> </video> </td>
+                    <td width="33%"> <video width="95%" controls> <source src="static/videos/ours/french-woman.mp4" type="video/mp4"> </video> </td>
+                  </tr>
+                  <tr>
+                    <td width="33%"> <span> English </span> </td>
+                    <td width="33%"> <span> German </span> </td>
+                    <td width="33%"> <span> French </span> </td>
+                  </tr>
+                  <tr>
+                    <td width="33%"> <video width="95%" controls> <source src="static/videos/ours/russian-man.mp4" type="video/mp4"> </video> </td>
+                    <td width="33%"> <video width="95%" controls> <source src="static/videos/ours/span-man.mp4" type="video/mp4"> </video> </td>
+                    <td width="33%"> <video width="95%" controls> <source src="static/videos/ours/Chinese.mp4" type="video/mp4"> </video> </td>
+                  </tr>
+                  <tr>
+                    <td width="33%"> <span> Russian </span> </td>
+                    <td width="33%"> <span> Spanish </span> </td>
+                    <td width="33%"> <span> Chinese </span> </td>
+                  </tr>
+              </tbody>
+            </table>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- abstract -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Abstract</h3>
+          <hr style="margin-top:0px">
+        </div>
+          <p class="text-justify">
+            Talking face generation aims at generating photo-realistic video portraits of a target person driven by input audio. 
+            Due to its nature of one-to-many mapping from the input audio to the output video 
+            (e.g., one speech content may have multiple feasible visual appearances), 
+            learning a deterministic mapping like previous works brings ambiguity during training, 
+            and thus causes inferior visual results. 
+            Although this one-to-many mapping could be alleviated in part by a two-stage framework 
+            (i.e., an audio-to-expression model followed by a neural-rendering model), 
+            it is still insufficient since the prediction is produced without enough information (e.g., emotions, wrinkles, etc.).
+          </p>
+          <p class="text-justify">
+            In this paper, we propose MemFace to complement the missing information with an implicit memory and an explicit memory 
+            that follow the sense of the two stages respectively. More specifically, the implicit memory is employed 
+            in the audio-to-expression model to capture high-level semantics in the audio-expression shared space, 
+            while the explicit memory is employed in the neural-rendering model to help synthesize pixel-level details. 
+            Our experimental results show that our proposed MemFace surpasses all the state-of-the-art results across multiple 
+            scenarios consistently and significantly. 
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- method -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <h3>Method</h3>
+          <hr style="margin-top:0px">
+          <!-- text -->
+          </div>
+            <p class="text-justify">
+              To alleviate the one-to-many mapping difficulty, we propose to complement the missing information with memories. To this end, an implicit memory is introduced to the audio-to-expression model to complement the semantically-aligned information, while an explicit memory is introduced to the neural-rendering model to retrieve the personalized visual details.
+            </p>
+          </div>
+          <br>
+          <!-- image -->
+          <div class="row justify-content-center" style="align-items:center; display:flex;">
+            <div> 
+              <img src="static/images/pipeline_full.png" alt="teaser" class="img-responsive" width="100%"/>
+            </div>
+          </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+
+  <!-- comparison results -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Comparison Results</h3>
+            <!-- text -->
+            <!-- </div> -->
+              <p class="text-justify">
+                With the same input audio, we compare our synthesized results with
+                the following works: NVP, MemGAN, ADNeRF, DFRF and LipSync3D.
+              </p>
+            <!-- </div> -->
+            <hr style="margin-top:0px">
+            <table style="table-layout: fixed;">
+              <tbody>
+                  <tr>
+                    <td width="50%"> <video width="95%" controls> <source src="static/videos/comp/nvp_ours.mp4" type="video/mp4"> </video> </td>
+                    <td width="50%"> <video width="95%" controls> <source src="static/videos/comp/memgan_ours.mp4" type="video/mp4"> </video> </td>
+                  </tr>
+                  <tr>
+                    <td width="50%"> <video width="95%" controls> <source src="static/videos/comp/adnerf_ours.mp4" type="video/mp4"> </video> </td>
+                    <td width="50%"> <video width="95%" controls> <source src="static/videos/comp/dfrf_ours.mp4" type="video/mp4"> </video> </td>
+                  </tr>
+                  <tr>
+                    <td width="50%" colspan="2"> <video width="50%" controls> <source src="static/videos/comp/lipsync3d_ours.mp4" type="video/mp4"> </video> </td>
+                    <!-- <td width="50%"> <video width="95%" controls> <source src="static/videos/comp/lipsync3d_ours.mp4" type="video/mp4"> </video> </td> -->
+                  </tr>
+                  <tr>
+                    <td width="100%" colspan="2"> <span>
+                      Quantitative comparison with the state-of-the-art methods. Our MemFace achieves the best subjective and
+                      objective quality by a large margin. </span> </td>
+                  </tr>
+                  <tr>
+                    <td width="100%" colspan="2"> <img width="50%" src="static/images/results/comp.png" type="image/png"> </td>
+                  </tr>
+              </tbody>
+            </table>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- results -->
+  <!-- <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+          <!-- <h3>Quantitative Comparison</h3> -->
+          <!-- text -->
+          <!-- </div>
+            <p class="text-justify">
+              Quantitative comparison with the state-of-the-art methods. Our MemFace achieves the best subjective and
+              objective quality by a large margin. 
+            </p>
+          </div>
+          <hr style="margin-top:0px"> -->
+          <!-- image -->
+          <!-- <div> 
+            <p style="text-align: center;">
+              <img src="static/images/results/comp.png" alt="teaser" class="img-responsive" width="70%"/>
+            </p>
+          </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br> -->
+
+  <!-- adaptation results -->
+  <section>
+    <div class="container">
+      <div class="row">
+        <div class="col-12 text-center">
+            <h3>Adaptation Results</h3>
+            <!-- text -->
+            </div>
+              <p class="text-justify">
+                Since we alleviate the one-to-many mapping problem and make the prediction easier, we also adapt our model to new speakers with few adaption data and compare it to the state-of-the-art methods with the same setting.
+              </p>
+            </div>
+            <!-- <br> -->
+            <hr style="margin-top:0px">
+            <table style="float:center; table-layout: fixed;">
+              <tbody>
+                  <tr>
+                    <td width="100%"> <span> We adapt our model and state-of-the-art methods to new speakers with 15s adaption data.</span> </td>
+                  </tr>
+                  <tr>
+                    <td width="100%"> <video width="100%" controls> <source src="static/videos/comp/comp_15s.mp4" type="video/mp4"> </video> </td>
+                  </tr>
+                  <tr>
+                    <td width="100%" align="center"> <img width="78%" src="static/images/results/ft_15s.png" type="image/png"> </td>
+                  </tr>
+
+                  <tr>
+                    <td width="100%"> <span> <br> We adapt our model and state-of-the-art methods to new speakers with 30s adaption data.</span> </td>
+                  </tr>
+                  <tr>
+                    <td width="100%"> <video width="100%" controls> <source src="static/videos/comp/comp_30s.mp4" type="video/mp4"> </video> </td>
+                  </tr>
+                  <tr>
+                    <td width="100%" align="center"> <img width="78%" src="static/images/results/ft_30s.png" type="image/png"> </td>
+                  </tr>
+              </tbody>
+            </table>
+
+        </div>
+      </div>
+    </div>
+  </section>
+  <br>
+  <br>
+
+  <!-- citing -->
+  <div class="container">
+    <div class="row ">
+      <div class="col-12">
+        <h3>Citation</h3>
+        <hr style="margin-top:0px">
+        <pre style="background-color: #e9eeef;padding: 1.25em 1.5em">
+<code>@article{tang2022memories,
+title={Memories are One-to-Many Mapping Alleviators in Talking Face Generation},
+author={Tang, Anni and He, Tianyu and Tan, Xu and Ling, Jun and Li, Runnan and Zhao, Sheng and Song, Li and Bian, Jiang},
+journal={arXiv preprint arXiv:xxxx.xxxxx},
+year={2022}
+}</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <footer class="text-center" style="margin-bottom:10px; font-size: medium;">
+      <hr>
+      Thanks to <a href="https://lioryariv.github.io/" target="_blank">Lior Yariv</a> for the <a href="https://lioryariv.github.io/idr/" target="_blank">website template</a>.
+  </footer>
+
+</body>
+</html>
